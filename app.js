@@ -1,5 +1,7 @@
 let nombres = [];
-
+let nombre = "";
+mostrarNombre(nombre);
+console.log(nombres);
 function agregarNombre(){
     let nombre = document.getElementById("amigo").value;
     if (nombre.length === 0) {
@@ -29,11 +31,12 @@ console.log(nombre);
 
 
 function mostrarNombre() {
-    if (nombres.length > 0) {
-console.log("nombres no está vacío");
+    if (nombres.length === 0) {
+console.log("nombres está vacío");
 } else {
 console.log("nombres está ingresado correctamente");  }
-
+}
+function Sorteo() {
 let indiceAletorio = Math.floor(Math.random()*nombres.length);
 let nombreAleatorio = nombres[indiceAletorio];
 console.log(nombreAleatorio);
