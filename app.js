@@ -1,5 +1,5 @@
 let nombres = [];
-let nombre = "";
+let nombre = 0;
 mostrarNombre(nombre);
 console.log(nombres);
 function agregarNombre(){
@@ -11,7 +11,9 @@ function agregarNombre(){
     }
 
 nombres.push(nombre);
+mostrarNombre();
 console.log(nombres);
+
 document.getElementById("amigo").value = "";
 }
 
@@ -27,16 +29,15 @@ function asignarNombre(listaAmigos,texto) {
     
 console.log(nombre);
 
-  
-
 
 function mostrarNombre() {
     if (nombres.length === 0) {
-console.log("nombres está vacío");
+console.log("nombres  está vacío");
 } else {
 console.log("nombres está ingresado correctamente");  }
 }
-function Sorteo() {
+
+function elegirGanador() {
 let indiceAletorio = Math.floor(Math.random()*nombres.length);
 let nombreAleatorio = nombres[indiceAletorio];
 console.log(nombreAleatorio);
