@@ -18,7 +18,7 @@ function asignarNombre(listaAmigos,texto) {
     lista.innerHTML = ""
     let elementoHTML = "";
     for (nombre of nombres) {
-    elementoHTML += `<li>${nombre}</li>`;
+    elementoHTML += nombre;
     }
     lista.innerHTML = elementoHTML;
 }
