@@ -38,11 +38,13 @@ console.log("nombres está ingresado correctamente");  }
 }
 
 function elegirGanador() { //selecciona al ganador de manera aleatoria
-let indiceAletorio = Math.floor(Math.random()*nombres.length);
+if (nombres.length === 0) {document.getElementById("resultado").innerHTML = "No hay nombres para elegir un ganador";}else{
+    let indiceAletorio = Math.floor(Math.random()*nombres.length);
 let nombreAleatorio = nombres[indiceAletorio];
 console.log(nombreAleatorio);
 let nombreGanador = document.getElementById("resultado");
 nombreGanador.innerHTML = nombreAleatorio;
+nombres = []; //limpia el array de nombres
 }
-
+}
 
